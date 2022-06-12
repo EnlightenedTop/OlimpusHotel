@@ -1,0 +1,172 @@
+/***********************************************************/
+/***********General settings********************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/***********************************************************/
+/***********Header settings********************************/
+.header {
+  text-transform: uppercase;
+  max-width: 200rem;
+  height: 8rem;
+  padding: 2.2rem 4.4rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+}
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-link:link,
+.nav-link:visited {
+  color: #fff;
+  position: relative;
+  text-decoration: none;
+}
+
+.nav-link:after {
+  content: " ";
+  position: absolute;
+  width: 110%;
+  transform: skew(0.512rad);
+  transform: scale(0, 0);
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  right: 1rem;
+  background-color: #4e0999;
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-in-out;
+}
+.nav-link:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.nav-links {
+  display: flex;
+  gap: 4rem;
+}
+/***********************************************************/
+/***********hero settings********************************/
+.background {
+  background-color: #000;
+  background-image: url(img/background/spining.gif);
+  min-height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+.hero-title {
+  color: #fff;
+  margin: 6rem 0 0 15rem;
+}
+
+.heading-primary {
+  font-size: 7.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 2.4rem;
+}
+.heading-description {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.8;
+}
+.animation {
+  background-image: linear-gradient(
+    -220deg,
+    #0a60c9 14%,
+    #4e0999 57%,
+    #ff1361 67%,
+    #fff800 70%
+  );
+  background-size: auto auto;
+  background-size: 200% auto;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: textclip 2s linear infinite;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 220% center;
+  }
+}
+@keyframes color {
+  to {
+    background-position: 320% center;
+  }
+}
+/***********************************************************/
+/***********buttons settings********************************/
+.buttons {
+  margin: 5rem 0 0 15rem;
+}
+.btn {
+  border: 2px solid #4e0999;
+  border-radius: 9px;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1.6rem 3.2rem;
+  transition: all 0.4s;
+  cursor: pointer;
+  margin-right: 3rem;
+}
+/***********buttons secondary********************************/
+.btn-primary-animation {
+  background-image: linear-gradient(
+    -250deg,
+    #0aa6c9 24%,
+    #ff1361 36%,
+    #fff800 45%,
+    #4e0999 35%
+  );
+  background-size: auto auto;
+  background-size: 300% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: color 2.7s linear infinite;
+}
+.btn-primary:link,
+.btn-primary:visited {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.4s;
+}
+.btn-primary:hover,
+.btn-primary:active {
+  transform: scale(1.1);
+}
+
+/***********buttons secondary********************************/
+.btn-secondary {
+  border: 1px solid #fff;
+}
+.btn-secondary:link,
+.btn-secondary:visited {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #fff;
+}
+.btn-secondary:hover,
+.btn-secondary:active {
+  transform: scale(1.2);
+}
