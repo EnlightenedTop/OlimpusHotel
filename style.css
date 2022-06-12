@@ -46,18 +46,17 @@ body {
   left: 0;
   right: 2rem;
   background-color: #4e0999;
-  transform-origin: bottom right;
-  transition: transform 0.3s ease-in-out;
+  transform-origin: bottom left;
+  transition: all 0.3s ease-in-out;
 }
 .nav-link:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-.nav-link {
-  transition: all 0.3s ease-in-out;
-}
+
 .nav-link:hover {
   color: #999;
+  transition: all 0.2s;
 }
 .nav-links {
   display: flex;
@@ -67,12 +66,12 @@ body {
 /***********hero settings********************************/
 .background {
   background-color: #000;
-  background-image: url(img/background/spining.gif);
+  background-image: url(img/background/nebula.jpg);
   min-height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50%;
+  background-size: cover;
 }
 .hero-title {
   color: #fff;
@@ -80,37 +79,37 @@ body {
 }
 
 .heading-primary {
-  font-size: 7.2rem;
-  font-weight: 700;
+  font-size: 8.2rem;
+  font-weight: 800;
   line-height: 1.3;
   margin-bottom: 2.4rem;
 }
 .heading-description {
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 500;
   line-height: 1.8;
 }
 .animation {
   background-image: linear-gradient(
-    -220deg,
-    #0a60c9 14%,
-    #4e0999 57%,
+    -250deg,
+    #0c2442 14%,
+    #620fba 57%,
     #ff1361 67%,
     #fff800 70%
   );
   background-size: auto auto;
-  background-size: 200% auto;
+  background-size: 147% auto;
 
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  animation: textclip 2s linear infinite;
+  animation: textclip 2.7s linear infinite;
 }
 
 @keyframes textclip {
   to {
-    background-position: 220% center;
+    background-position: 320% center;
   }
 }
 @keyframes color {
@@ -124,10 +123,10 @@ body {
   margin: 5rem 0 0 15rem;
 }
 .btn {
-  border: 2px solid #4e0999;
+  border: 3px solid #4e0999;
   border-radius: 9px;
-  font-size: 2rem;
   font-weight: 700;
+  font-size: 2.4rem;
   padding: 1.6rem 3.2rem;
   transition: all 0.4s;
   cursor: pointer;
@@ -143,7 +142,7 @@ body {
     #4e0999 35%
   );
   background-size: auto auto;
-  background-size: 300% auto;
+  background-size: 270% auto;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -153,26 +152,32 @@ body {
 .btn-primary:link,
 .btn-primary:visited {
   display: inline-block;
+  font-size: 2.4rem;
   color: #fff;
   text-decoration: none;
   transition: all 0.4s;
+  font-weight: 700;
 }
 .btn-primary:hover,
 .btn-primary:active {
   transform: scale(1.1);
+  background-color: rgba(98, 15, 186, 05);
 }
 
 /***********buttons secondary********************************/
-.btn-secondary {
-  border: 1px solid #fff;
-}
+
 .btn-secondary:link,
 .btn-secondary:visited {
   text-decoration: none;
-  font-size: 1.8rem;
   color: #fff;
+  border: 2px solid #fff;
+  font-size: 2.2rem;
+  padding: 1.88rem 3.2rem;
+  transition: all 0.4s;
+  font-weight: 400;
 }
 .btn-secondary:hover,
 .btn-secondary:active {
-  transform: scale(1.2);
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.5);
 }
