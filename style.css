@@ -64,9 +64,13 @@ body {
 }
 /***********************************************************/
 /***********hero settings********************************/
+.hero {
+  animation: ease-in 2s cubic-bezier(0.1, 5, 10, 8);
+  transition: ease-in 2s;
+}
 .background {
   background-color: #000;
-  background-image: url(img/background/nebula.jpg);
+  background-image: url(img/background/nebula.webp);
   min-height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
@@ -106,7 +110,8 @@ body {
 
   animation: textclip 2.7s linear infinite;
 }
-
+/*****************************************************
+**************Animation keyframes****************************/
 @keyframes textclip {
   to {
     background-position: 320% center;
@@ -115,6 +120,14 @@ body {
 @keyframes color {
   to {
     background-position: 320% center;
+  }
+}
+@keyframes ease-in {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transfrom: translateY(0);
   }
 }
 /***********************************************************/
@@ -180,4 +193,10 @@ body {
 .btn-secondary:active {
   color: #000;
   background-color: rgba(255, 255, 255, 0.5);
+}
+/******************text apearing effect**********/
+/***********************************************/
+.hidden-text {
+  opacity: 0;
+  transform: translateY(180px);
 }
