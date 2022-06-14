@@ -20,6 +20,8 @@ setTimeout(() => {
 /////////////////////////////////////////////////
 btnFeatures.addEventListener("click", function (e) {
   const clicked = e.target.closest(".btn-features");
+  /////Safe guard////////////////////////////////
+  if (!clicked) return;
   txtAllBox.forEach((m) => m.classList.remove("feature-modal-active"));
   btnAllFts.forEach((b) => b.classList.remove("btn-active"));
   ///////////////////////////////////////////////////////////
