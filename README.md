@@ -1,3 +1,3 @@
 # OlimpusHotel
 A fictional hotel traveling through space
-Imppemented few css animations just for fun and learn more about effects ,code inspired from others , took it , experimented with it , with the values and properties , learning what each of them actually do , looking forward to learn more , this project's sole porpouse is for experimenting with UI/UX
+Implementing few things i learned about html css and javascript , using no framework ,just pure code ,sole porpouse is to have something like creative which looks good , in my opinion 
