@@ -13,6 +13,7 @@ const txtAllBox = document.querySelectorAll(".features-modal");
 const aboutSection = document.querySelector(".features-section");
 const header = document.querySelector(".header");
 const nav = document.querySelector(".nav-bar");
+const allSections = document.querySelectorAll(".section");
 ///////////////////////////////////////////////////////
 ////////////////text dissapear and apear effect/////////
 ////////////////////////////////////////////////////////
@@ -21,7 +22,7 @@ setTimeout(() => {
 }, 200);
 setTimeout(() => {
   buttons.classList.add("buttons-active");
-}, 700);
+}, 300);
 ///////////////////////////////////////////
 /////////////////Features section modals///////////
 /////////////////////////////////////////////////
@@ -48,18 +49,48 @@ btnFeatures.addEventListener("click", function (e) {
 //   btn.style.backgroundColor = `linear-gradient(from top to left, ${randomColor} ${randomDeg}%, ${randomColor} ${randomDeg}%)`;
 // }, 500);
 /////////////////////sticky navigation
-const initialCoord = aboutSection.getBoundingClientRect().top;
-window.addEventListener("scroll", function (e) {
-  if (window.scrollY > initialCoord) header.classList.add("sticky");
+// const initialCoord = aboutSection.getBoundingClientRect().top;
+// window.addEventListener("scroll", function (e) {
+//   if (window.scrollY > initialCoord) header.classList.add("sticky");
+//   else header.classList.remove("sticky");
+// });
+/////Intersection observer API sticky nav
+const navHeight = nav.getBoundingClientRect().height;
+const stickyNav = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) header.classList.add("sticky");
   else header.classList.remove("sticky");
-});
-/////Intersection observer API
-const obsCallback = function (entries, observer) {
-  entries.forEach((entry) => console.log(entry));
 };
 const obsOptions = {
   root: null,
-  threshold: 0.1,
+  threshold: 0,
+  rootMargin: `${navHeight}px`,
 };
-const observer = new IntersectionObserver(obsCallback, obsOptions);
-observer.observe(aboutSection);
+const heroObserver = new IntersectionObserver(stickyNav, obsOptions);
+heroObserver.observe(hero);
+////////////////// reveal sections with observer api
+
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+  console.log(entry);
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove("section--hidden");
+};
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.2,
+});
+
+allSections.forEach(function (section) {
+  sectionObserver.observe(section);
+  section.classList.add("section--hidden");
+});
+console.log();
+////////smooth scrolling
+document.querySelector("nav-links").addEventListener("click", function (e) {
+  if (e.target.classList.contains("nav-link")) {
+    e.preventDefault();
+    const id = e.target.getAttribute("href");
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  }
+});
