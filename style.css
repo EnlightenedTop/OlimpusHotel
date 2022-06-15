@@ -18,16 +18,20 @@ body {
 /***********Header settings********************************/
 .header {
   text-transform: uppercase;
-  max-width: 200rem;
+  width: 100%;
   height: 8rem;
   padding: 2.2rem 4.4rem;
   font-size: 2rem;
   font-weight: 600;
   color: #fff;
+  position: absolute;
+  top: 0;
+  display: block;
 }
 .nav-bar {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 .nav-link:link,
 .nav-link:visited {
@@ -57,7 +61,7 @@ body {
 
 .nav-link:hover {
   color: rgba(255, 255, 255, 0.5);
-  transition: all 0.2s;
+  transition: all 0.3s;
 }
 .nav-links {
   display: flex;
@@ -76,22 +80,42 @@ body {
   color: rgba(255, 255, 255, 0.5);
   transition: all 0.3s;
 }
-/***********************************************************/
-/***********hero settings********************************/
-.hero {
-  opacity: 0;
-  transform: translateY(-80px);
+/***************************************
+sticky nav ***************************************
+*************************************************/
+.sticky {
+  position: fixed;
+  top: 0;
+  background-color: rgba(78, 9, 153, 0.6);
+  width: 100%;
+  z-index: 10;
 }
-.background {
+.sticky .nav-link:hover {
+  color: rgba(17, 17, 17, 0.5);
+  transition: all 0.3s;
+}
+.sticky .logo:hover,
+.logo:active {
+  color: rgba(17, 17, 17, 0.5);
+  transition: all 0.3s;
+}
+/********************************************************
+***********hero settings********************************/
+.hero {
   background-color: #000;
   background-image: url(img/background/nebula.webp);
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  position: relative;
+  padding-top: 5rem;
 }
+
 .hero-title {
+  opacity: 0;
+  transform: translateY(-80px);
   color: #fff;
   margin: 6rem 0 0 15rem;
 }
@@ -143,6 +167,9 @@ body {
   margin: 5rem 0 0 15rem;
   display: flex;
   gap: 5rem;
+  opacity: 0;
+  transform: translateX(-180px);
+  transition: ease-in-out 2s;
 }
 .btn {
   border-radius: 13px;
@@ -150,6 +177,10 @@ body {
   transition: all 0.4s;
   cursor: pointer;
   margin-right: 3rem;
+}
+.buttons-active {
+  opacity: 1;
+  transform: translateX(0);
 }
 /***********buttons primary********************************/
 .btn-primary-animation {
@@ -213,6 +244,7 @@ body {
 .features-section {
   margin: 8rem auto;
   max-width: 150rem;
+  height: 150rem;
   padding: 4rem 14rem;
 }
 
@@ -234,9 +266,10 @@ body {
   cursor: pointer;
   text-align: center;
 }
-.btn-features:hover {
+.btn-features:hover,
+.btn-features:active {
+  background-color: transparent;
   color: #0fa;
-  transform: scale(1.1);
 }
 .btn-active {
   color: #0fa;
