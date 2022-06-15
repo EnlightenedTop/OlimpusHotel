@@ -44,7 +44,7 @@ body {
   content: " ";
   position: absolute;
   width: 105%;
-  transform: skew(0.512rad);
+  transform: skew(0.723rad);
   transform: scale(0, 0);
   height: 4px;
   bottom: 0;
@@ -91,12 +91,12 @@ sticky nav ***************************************
   z-index: 10;
 }
 .sticky .nav-link:hover {
-  color: rgba(17, 17, 17, 0.5);
+  color: rgba(17, 17, 17, 0.9);
   transition: all 0.3s;
 }
 .sticky .logo:hover,
 .logo:active {
-  color: rgba(17, 17, 17, 0.5);
+  color: rgba(17, 17, 17, 0.8);
   transition: all 0.3s;
 }
 /********************************************************
