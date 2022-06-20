@@ -14,6 +14,9 @@ const aboutSection = document.querySelector(".features-section");
 const header = document.querySelector(".header");
 const nav = document.querySelector(".nav-bar");
 const allSections = document.querySelectorAll(".section");
+const allBtnBook = document.querySelectorAll(".btn-book");
+const overlay = document.querySelector(".overlay");
+const allModals = document.querySelectorAll(".modal");
 ///////////////////////////////////////////////////////
 ////////////////text dissapear and apear effect/////////
 ////////////////////////////////////////////////////////
@@ -87,10 +90,83 @@ allSections.forEach(function (section) {
 });
 console.log();
 ////////smooth scrolling
-document.querySelector("nav-links").addEventListener("click", function (e) {
+document.querySelector(".nav-links").addEventListener("click", function (e) {
   if (e.target.classList.contains("nav-link")) {
     e.preventDefault();
     const id = e.target.getAttribute("href");
     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
   }
+});
+////////Modal apear when the button is clicked
+
+const slides = document.querySelectorAll(".slide");
+const slideBtnLeft = document.querySelector(".slider-btn-left");
+const slideBtnRight = document.querySelector(".slider-btn-right");
+const dotContainer = document.querySelector(".dots");
+
+/////////////////
+////////////////
+/////////////////
+const createDots = function () {
+  slides.forEach((s, i) => {
+    dotContainer.insertAdjacentHTML(
+      "beforeend",
+      `<button class="dots_dot" data-slide='${i}'></button>`
+    );
+  });
+};
+createDots();
+const goToSlide = function (slide) {
+  slides.forEach((s, i) => {
+    s.style.transform = `translateX(${100 * (i - slide)}%)`;
+  });
+};
+let curSlide = 0;
+const maxSlides = 3;
+
+goToSlide(0);
+
+const nextSlide = function () {
+  if (curSlide === maxSlides - 1) {
+    curSlide = 0;
+  } else {
+    curSlide++;
+  }
+
+  goToSlide(curSlide);
+};
+
+const prevSlide = function () {
+  if (curSlide < 1) {
+    curSlide = maxSlides - 1;
+  } else {
+    curSlide--;
+  }
+
+  goToSlide(curSlide);
+};
+
+slideBtnRight.addEventListener("click", nextSlide);
+slideBtnLeft.addEventListener("click", prevSlide);
+
+document.addEventListener("keydown", function (e) {
+  e.key === "ArrowLeft" && prevSlide();
+  e.key === "ArrowRight" && nextSlide();
+});
+
+////////Modal showup
+
+allBtnBook.forEach((btn) => {
+  btn.addEventListener("click", function (e) {
+    overlay.classList.remove("hidden");
+    const pressedBtn = e.target.dataset.btn;
+    console.log(pressedBtn);
+    document.querySelector(`.modal--${pressedBtn}`).classList.remove("hidden");
+    document
+      .querySelector(".btn-close-modal")
+      .addEventListener("click", function (e) {
+        overlay.classList.add("hidden");
+        document.querySelector(`.modal--${pressedBtn}`).classList.add("hidden");
+      });
+  });
 });

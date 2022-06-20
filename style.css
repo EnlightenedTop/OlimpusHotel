@@ -268,6 +268,9 @@ sticky nav ***************************************
   justify-content: space-evenly;
   /* max-width: 65rem; */
 }
+.feature-icon {
+  border-radius: 50%;
+}
 .btn-features {
   background-color: transparent;
   display: inline-block;
@@ -342,7 +345,7 @@ sticky nav ***************************************
 /*****************Rooms section******************/
 /*****************************************************/
 .rooms-section {
-  width: 100vw;
+  width: 100%;
   margin: 0 auto;
 }
 .grid-rooms {
@@ -352,7 +355,7 @@ sticky nav ***************************************
   gap: 7rem;
 }
 .room {
-  height: 62rem;
+  height: 65rem;
   width: 37rem;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
   border-radius: 13px;
@@ -375,7 +378,7 @@ sticky nav ***************************************
 .img-gods-box {
   width: 100%;
   height: 35%;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   transition: all 0.5s;
 }
 .gods-room-img {
@@ -385,17 +388,18 @@ sticky nav ***************************************
 .description-gods-room {
   width: 100%;
   margin: 0 auto;
-  padding-left: 3rem;
+  padding-left: 5rem;
   padding-bottom: 2rem;
+  text-align: left;
 }
 .room-features {
   font-size: 2rem;
-  padding: 1rem 0 0 0;
+  padding: 1.5rem 0 0 0;
   color: #f03e3e;
 }
 
 .btn-book {
-  border-top: solid 1px;
+  border: none;
   border-radius: 0px;
   background-color: #1c0435;
   width: 100%;
@@ -501,4 +505,117 @@ sticky nav ***************************************
 
 .hestia-food {
   color: #40c057;
+}
+/*******************************************************************
+***************Modal section***************************************/
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 85%;
+  width: 85%;
+  background-color: #f3f3f3;
+  padding: 2rem 3rem;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.5s;
+}
+.modal-title {
+  margin-bottom: 2rem;
+}
+.heading-modal {
+  font-size: 2rem;
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
+}
+.btn-close-modal {
+  position: absolute;
+  top: 0;
+  right: 1%;
+  border: none;
+  font-size: 3.2rem;
+  cursor: pointer;
+}
+/*****************************************************
+*************Modal image slider *********************/
+.img-slider {
+  width: 50%;
+  height: 65%;
+  position: relative;
+  overflow: hidden;
+}
+.slide-img {
+  width: 100%;
+  height: 100%;
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+}
+.slider-btn {
+  position: absolute;
+  top: 50%;
+
+  width: 5.5rem;
+  height: 5.5rem;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: none;
+
+  /* font-size: 3.2rem; */
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  transition: all 0.3s;
+}
+.slider-btn:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #000;
+}
+.slider-btn-left {
+  left: 6%;
+  transform: translate(-50%, -50%);
+}
+.slider-btn-right {
+  right: 6%;
+  transform: translate(50%, -50%);
+}
+.slider-btn-icon {
+  font-size: 3.2rem;
+
+  color: #666;
+  font-weight: 400;
+  transition: all 0.3s;
+}
+.slider-btn:hover .slider-btn-icon {
+  color: #222;
+}
+.dots_dot {
+  position: absolute;
+  bottom: 10%;
+  background-color: rgba(200, 200, 200, 0.3);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: none;
 }

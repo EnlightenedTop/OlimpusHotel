@@ -106,7 +106,7 @@
               <ion-icon class="room-icon zeus-room-icon" name="wine-outline"></ion-icon> Dionysus bar
             </p>
           </div>
-          <button class="btn btn-book">Book room</button>
+          <button data-btn="1" class="btn btn-book">Book room</button>
           <!-- Hera room -->
         </div>
         <div class="room hera-room">
@@ -127,7 +127,7 @@
               <ion-icon class="room-icon zeus-room-icon" name="wine-outline"></ion-icon> Dionysus bar
             </p>
           </div>
-          <button class="btn btn-book">Book room</button>
+          <button data-btn="2" class="btn btn-book">Book room</button>
         </div>
         <!-- Poseidon room -->
         <div class="room poseidon-room">
@@ -148,7 +148,7 @@
               <ion-icon class="room-icon zeus-room-icon" name="wine-outline"></ion-icon> Dionysus bar
             </p>
           </div>
-          <button class="btn btn-book">Book room</button>
+          <button data-btn="3" class="btn btn-book">Book room</button>
         </div>
         <!-- Demeter room -->
         <div class="room demeter-room">
@@ -167,7 +167,7 @@
               <ion-icon class="room-icon zeus-room-icon" name="wine-outline"></ion-icon> Dionysus bar
             </p>
           </div>
-          <button class="btn btn-book">Book room</button>
+          <button data-btn="4" class="btn btn-book">Book room</button>
         </div>
         <!-- Athena room -->
         <div class="room athena-room">
@@ -186,7 +186,7 @@
               <ion-icon class="room-icon zeus-room-icon" name="wine-outline"></ion-icon> Dionysus bar
             </p>
           </div>
-          <button class="btn btn-book">Book room</button>
+          <button data-btn="5" class="btn btn-book">Book room</button>
         </div>
         <!-- Apollo room -->
         <div class="room apollo-room">
@@ -205,7 +205,7 @@
               <ion-icon class="room-icon zeus-room-icon" name="wine-outline"></ion-icon> Dionysus bar
             </p>
           </div>
-          <button class="btn btn-book">Book room</button>
+          <button data-btn="6" class="btn btn-book">Book room</button>
         </div>
         <!-- Artemis room -->
         <div class="room artemis-room">
@@ -224,7 +224,7 @@
               <ion-icon class="room-icon zeus-room-icon" name="wine-outline"></ion-icon> Dionysus bar
             </p>
           </div>
-          <button class="btn btn-book">Book room</button>
+          <button data-btn="7" class="btn btn-book">Book room</button>
         </div>
         <!-- Ares room -->
         <div class="room ares-room">
@@ -243,7 +243,7 @@
               <ion-icon class="room-icon zeus-room-icon" name="wine-outline"></ion-icon> Dionysus bar
             </p>
           </div>
-          <button class="btn btn-book">Book room</button>
+          <button data-btn="8" class="btn btn-book">Book room</button>
         </div>
         <!-- Aphrodite room -->
         <div class="room aphrodite-room">
@@ -262,7 +262,7 @@
               <ion-icon class="room-icon zeus-room-icon" name="wine-outline"></ion-icon> Dionysus bar
             </p>
           </div>
-          <button class="btn btn-book">Book room</button>
+          <button data-btn="9" class="btn btn-book">Book room</button>
         </div>
         <!-- Hephaestus room -->
         <div class="room hephaestus-room">
@@ -281,7 +281,7 @@
               <ion-icon class="room-icon zeus-room-icon" name="wine-outline"></ion-icon> Dionysus bar
             </p>
           </div>
-          <button class="btn btn-book">Book room</button>
+          <button data-btn="10" class="btn btn-book">Book room</button>
         </div>
         <!-- Hermes room -->
         <div class="room hermes-room">
@@ -300,7 +300,7 @@
               <ion-icon class="room-icon zeus-room-icon" name="wine-outline"></ion-icon> Dionysus bar
             </p>
           </div>
-          <button class="btn btn-book">Book room</button>
+          <button data-btn="11" class="btn btn-book">Book room</button>
         </div>
         <!-- Hestia room -->
         <div class="room hestia-room">
@@ -321,14 +321,215 @@
               <ion-icon class="room-icon zeus-room-icon" name="wine-outline"></ion-icon> Dionysus bar
             </p>
           </div>
-          <button class="btn btn-book">Book room</button>
+          <button data-btn="12" class="btn btn-book">Book room</button>
         </div>
         
       </div>
     </section>
 
 
-
+    <div class="modal-section">
+      <!-- zeus-section -->
+      <div  class="modal modal--1 modal-zeus hidden">
+        <button class="btn-close-modal">&times;</button>
+       <div class="section-title modal-title">
+        <p class="heading-secondary-heading heading-modal">⚡</p>
+        <h2 class="heading-secondary animation">Zeus room</h2>
+      </div>
+      <div class="img-slider">
+        <div class="slide">
+          <img class="slide-img" src="img/Zeus/zeus.webp" alt="zeus room main photo">
+        </div>
+        <div class="slide">
+          <img class="slide-img" src="img/Zeus/zeus-misc.jpg" alt="zeus room secondary photo">
+        </div>
+        <div class="slide">
+          <img class="slide-img" src="img/Zeus/zeus-misc3.jpg" alt="zeus room tertiary photo">
+        </div>
+        <button class="slider-btn slider-btn-left"><ion-icon class="slider-btn-icon" name="arrow-back-outline"></ion-icon></button>
+        <button class="slider-btn slider-btn-right"><ion-icon class="slider-btn-icon" name="arrow-forward-outline"></ion-icon></button>
+        <div class="dots"></div>
+      </div>
+    </div>
+<!-- zeus-section -->
+      <div data-modal="2" class="modal modal-hera hidden">
+        <button class="btn--close-modal">&times;</button>
+        <div class="section-title modal-title">
+        <p class="heading-secondary-heading">Is it safe?</p>
+        <h2 class="heading-secondary animation">How does it work?</h2>
+      </div>
+      <div class="img-slider">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <button class="slider-btn slider-btn-left">&larr;</button>
+        <button class="slider-btn slider-btn-right">&rarr;</button>
+        <div class="dots"></div>
+      </div>
+    </div>
+    <!-- hera-section -->
+      <div data-modal="3" class="modal modal-poseidon hidden">
+        <button class="btn--close-modal">&times;</button>
+        <div class="section-title modal-title">
+        <p class="heading-secondary-heading">Is it safe?</p>
+        <h2 class="heading-secondary animation">How does it work?</h2>
+      </div>
+      <div class="img-slider">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <button class="slider-btn slider-btn-left">&larr;</button>
+        <button class="slider-btn slider-btn-right">&rarr;</button>
+        <div class="dots"></div>
+      </div>
+    </div>
+    <!-- demeter-section -->
+      <div data-modal="4" class="modal modal-demeter hidden">
+        <button class="btn--close-modal">&times;</button>
+        <div class="section-title modal-title">
+        <p class="heading-secondary-heading">Is it safe?</p>
+        <h2 class="heading-secondary animation">How does it work?</h2>
+      </div>
+      <div class="img-slider">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <button class="slider-btn slider-btn-left">&larr;</button>
+        <button class="slider-btn slider-btn-right">&rarr;</button>
+        <div class="dots"></div>
+      </div>
+    </div>
+    <!-- athena-section -->
+      <div data-modal="5" class="modal modal-athena hidden">
+        <button class="btn--close-modal">&times;</button>
+        <div class="section-title modal-title">
+        <p class="heading-secondary-heading">Is it safe?</p>
+        <h2 class="heading-secondary animation">How does it work?</h2>
+      </div>
+      <div class="img-slider">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <button class="slider-btn slider-btn-left">&larr;</button>
+        <button class="slider-btn slider-btn-right">&rarr;</button>
+        <div class="dots"></div>
+      </div>
+    </div>
+    <!-- apollo-section -->
+      <div data-modal="6" class="modal modal-apollo hidden">
+        <button class="btn--close-modal">&times;</button>
+        <div class="section-title modal-title">
+        <p class="heading-secondary-heading">Is it safe?</p>
+        <h2 class="heading-secondary animation">How does it work?</h2>
+      </div>
+      <div class="img-slider">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <button class="slider-btn slider-btn-left">&larr;</button>
+        <button class="slider-btn slider-btn-right">&rarr;</button>
+        <div class="dots"></div>
+      </div>
+    </div>
+    <!-- artemis-section -->
+      <div data-modal="7" class="modal modal-artemis hidden">
+        <button class="btn--close-modal">&times;</button>
+        <div class="section-title modal-title">
+        <p class="heading-secondary-heading">Is it safe?</p>
+        <h2 class="heading-secondary animation">How does it work?</h2>
+      </div>
+      <div class="img-slider">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <button class="slider-btn slider-btn-left">&larr;</button>
+        <button class="slider-btn slider-btn-right">&rarr;</button>
+        <div class="dots"></div>
+      </div>
+    </div>
+    <!-- ares-section -->
+      <div data-modal="8" class="modal modal-ares hidden">
+        <button class="btn--close-modal">&times;</button>
+        <div class="section-title modal-title">
+        <p class="heading-secondary-heading">Is it safe?</p>
+        <h2 class="heading-secondary animation">How does it work?</h2>
+      </div>
+      <div class="img-slider">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <button class="slider-btn slider-btn-left">&larr;</button>
+        <button class="slider-btn slider-btn-right">&rarr;</button>
+        <div class="dots"></div>
+      </div>
+    </div>
+    <!-- aphrodite-section -->
+      <div data-modal="9" class="modal modal-aphrodite hidden">
+        <button class="btn--close-modal">&times;</button>
+        <div class="section-title modal-title">
+        <p class="heading-secondary-heading">Is it safe?</p>
+        <h2 class="heading-secondary animation">How does it work?</h2>
+      </div>
+      <div class="img-slider">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <button class="slider-btn slider-btn-left">&larr;</button>
+        <button class="slider-btn slider-btn-right">&rarr;</button>
+        <div class="dots"></div>
+      </div>
+    </div>
+    <!-- hephaestus-section -->
+      <div data-modal="10" class="modal modal-hephaestus hidden">
+        <button class="btn--close-modal">&times;</button>
+        <div class="section-title modal-title">
+        <p class="heading-secondary-heading">Is it safe?</p>
+        <h2 class="heading-secondary animation">How does it work?</h2>
+      </div>
+      <div class="img-slider">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <button class="slider-btn slider-btn-left">&larr;</button>
+        <button class="slider-btn slider-btn-right">&rarr;</button>
+        <div class="dots"></div>
+      </div>
+    </div>
+    <!-- hermes-section -->
+      <div data-modal="11" class="modal modal-hermes hidden">
+        <button class="btn--close-modal">&times;</button>
+        <div class="section-title modal-title">
+        <p class="heading-secondary-heading">Is it safe?</p>
+        <h2 class="heading-secondary animation">How does it work?</h2>
+      </div>
+      <div class="img-slider">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <button class="slider-btn slider-btn-left">&larr;</button>
+        <button class="slider-btn slider-btn-right">&rarr;</button>
+        <div class="dots"></div>
+      </div>
+    </div>
+    <!-- hestia-section -->
+      <div data-modal="12" class="modal modal-hestia hidden">
+        <button class="btn--close-modal">&times;</button>
+        <div class="section-title modal-title">
+        <p class="heading-secondary-heading">Is it safe?</p>
+        <h2 class="heading-secondary animation">How does it work?</h2>
+      </div>
+      <div class="img-slider">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        
+        <button class="slider-btn slider-btn-left">&larr;</button>
+        <button class="slider-btn slider-btn-right">&rarr;</button>
+        <div class="dots"></div>
+      </div>
+    </div>
+    </div>
+    <div class="overlay hidden"></div>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
