@@ -12,6 +12,7 @@ html {
 }
 body {
   font-family: "Poppins", sans-serif;
+  color: #1c0435;
 }
 /***********************************************************/
 /***********Section reveal effect********************************/
@@ -249,15 +250,15 @@ sticky nav ***************************************
 }
 /*****************features section******************/
 /*****************************************************/
-.features-section {
+.section {
   margin: 0 auto;
-  max-width: 100%;
+  max-width: 100vw;
   /* height: 100vh; */
-  padding: 24rem 14rem;
+  padding: 24rem 14rem 0 14rem;
 }
-.features-title {
+.section-title {
   text-align: left;
-  margin: 0 0 15rem 2rem;
+  margin-bottom: 15rem;
   max-width: 50%;
 }
 .features-buttons {
@@ -310,7 +311,7 @@ sticky nav ***************************************
   font-weight: 600;
   color: #111;
   padding: 2rem 6rem 7rem 6rem;
-  max-width: 95%;
+  max-width: 75%;
   height: auto;
   opacity: 1;
   border-radius: 20px;
@@ -340,5 +341,164 @@ sticky nav ***************************************
 }
 /*****************Rooms section******************/
 /*****************************************************/
-/* .rooms-section {
-} */
+.rooms-section {
+  width: 100vw;
+  margin: 0 auto;
+}
+.grid-rooms {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  gap: 7rem;
+}
+.room {
+  height: 62rem;
+  width: 37rem;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  border-radius: 13px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.room:hover .img-gods-box {
+  transform: scale(1.03);
+}
+.btn-book:hover,
+.btn-book:active {
+  color: #888;
+}
+.gods-room-title {
+  padding: 1rem 0;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+}
+.img-gods-box {
+  width: 100%;
+  height: 35%;
+  margin-bottom: 2rem;
+  transition: all 0.5s;
+}
+.gods-room-img {
+  width: 100%;
+  height: 100%;
+}
+.description-gods-room {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 3rem;
+  padding-bottom: 2rem;
+}
+.room-features {
+  font-size: 2rem;
+  padding: 1rem 0 0 0;
+  color: #f03e3e;
+}
+
+.btn-book {
+  border-top: solid 1px;
+  border-radius: 0px;
+  background-color: #1c0435;
+  width: 100%;
+  height: 6.5rem;
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  text-align: center;
+  transition: all 0.3s;
+}
+/*************************/
+/*****Room features-color*/
+.zeus-pool,
+.zeus-gym,
+.zeus-food,
+.zeus-gaming,
+.zeus-workshop,
+.zeus-bar {
+  color: #40c057;
+}
+/**/
+.hera-pool,
+.hera-gym,
+.hera-food,
+.hera-workshop,
+.hera-bar {
+  color: #40c057;
+}
+/**/
+.poseidon-pool,
+.poseidon-gym,
+.poseidon-food,
+.poseidon-gaming,
+.poseidon-workshop {
+  color: #40c057;
+}
+
+/**/
+
+.demeter-gym,
+.demeter-food,
+.demeter-gaming,
+.demeter-workshop {
+  color: #40c057;
+}
+
+/**/
+.athena-pool,
+.athena-gym,
+.athena-workshop,
+.athena-bar {
+  color: #40c057;
+}
+/**/
+
+.artemis-food,
+.artemis-gaming,
+.artemis-workshop,
+.artemis-bar {
+  color: #40c057;
+}
+/**/
+.apollo-pool,
+.apollo-gym,
+.apollo-food,
+.apollo-bar {
+  color: #40c057;
+}
+/**/
+.ares-pool,
+.ares-gym,
+.ares-food,
+.ares-gaming,
+.ares-bar {
+  color: #40c057;
+}
+/**/
+.aphrodite-pool,
+.aphrodite-gym,
+.aphrodite-food,
+.aphrodite-bar {
+  color: #40c057;
+}
+/**/
+
+.hephaestus-food,
+.hephaestus-workshop,
+.hephaestus-bar {
+  color: #40c057;
+}
+/**/
+.hermes-pool,
+.hermes-gym,
+.hermes-food,
+.hermes-gaming,
+.hermes-workshop,
+.hermes-bar {
+  color: #40c057;
+}
+/**/
+
+.hestia-food {
+  color: #40c057;
+}
