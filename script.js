@@ -170,3 +170,24 @@ allBtnBook.forEach((btn) => {
       });
   });
 });
+//////////click on the image to make the image bigger
+
+const allImg = document.querySelectorAll(".gods-room-img");
+const imgOverlay = document.querySelector(".img-overlay");
+allImg.forEach(function (img) {
+  img.addEventListener("click", function (e) {
+    const pressedImg = e.target.getAttribute("src");
+
+    console.log(pressedImg);
+    imgOverlay.classList.remove("hidden");
+    overlay.classList.remove("hidden");
+    imgOverlay.style.backgroundImage = "url(" + pressedImg + ")";
+  });
+});
+document
+  .querySelector(".img-overlay-close")
+  .addEventListener("click", function () {
+    imgOverlay.classList.add("hidden");
+    overlay.classList.add("hidden");
+    imgOverlay.style.backgroundImage = "";
+  });
