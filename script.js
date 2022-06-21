@@ -90,6 +90,7 @@ allSections.forEach(function (section) {
 });
 console.log();
 ////////smooth scrolling
+history.scrollRestoration = "manual";
 document.querySelector(".nav-links").addEventListener("click", function (e) {
   if (e.target.classList.contains("nav-link")) {
     e.preventDefault();
