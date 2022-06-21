@@ -145,7 +145,7 @@ document.addEventListener("keydown", function (e) {
   e.key === "ArrowLeft" && prevSlide();
   e.key === "ArrowRight" && nextSlide();
 });
-goToSlide(0);
+
 ////////Modal showup
 
 // allBtnBook.forEach((btn) => {
@@ -188,7 +188,6 @@ document
     imgOverlay.classList.add("hidden");
     overlay.classList.add("hidden");
     imgOverlay.style.backgroundImage = "";
-    goToSlide(0);
   });
 //////////////////////////Solving the modal problem////////////////
 
@@ -227,6 +226,7 @@ allBtnBook.forEach((btn) => {
         modal.classList.add("hidden");
         overlay.classList.add("hidden");
         goToSlide(0);
+        curSlide = 0;
       });
   });
 });
