@@ -103,20 +103,11 @@ document.querySelector(".nav-links").addEventListener("click", function (e) {
 const slides = document.querySelectorAll(".slide");
 const slideBtnLeft = document.querySelector(".slider-btn-left");
 const slideBtnRight = document.querySelector(".slider-btn-right");
-const dotContainer = document.querySelector(".dots");
 
 /////////////////
 ////////////////
 /////////////////
-const createDots = function () {
-  slides.forEach((s, i) => {
-    dotContainer.insertAdjacentHTML(
-      "beforeend",
-      `<button class="dots_dot" data-slide='${i}'></button>`
-    );
-  });
-};
-createDots();
+
 const goToSlide = function (slide) {
   slides.forEach((s, i) => {
     s.style.transform = `translateX(${100 * (i - slide)}%)`;
@@ -154,23 +145,29 @@ document.addEventListener("keydown", function (e) {
   e.key === "ArrowLeft" && prevSlide();
   e.key === "ArrowRight" && nextSlide();
 });
-
+goToSlide(0);
 ////////Modal showup
 
-allBtnBook.forEach((btn) => {
-  btn.addEventListener("click", function (e) {
-    overlay.classList.remove("hidden");
-    const pressedBtn = e.target.dataset.btn;
-    console.log(pressedBtn);
-    document.querySelector(`.modal--${pressedBtn}`).classList.remove("hidden");
-    document
-      .querySelector(".btn-close-modal")
-      .addEventListener("click", function (e) {
-        overlay.classList.add("hidden");
-        document.querySelector(`.modal--${pressedBtn}`).classList.add("hidden");
-      });
-  });
-});
+// allBtnBook.forEach((btn) => {
+//   btn.addEventListener("click", function (e) {
+//     overlay.classList.remove("hidden");
+//     let pressedBtn = e.target.dataset.btn;
+//     let targetModal = document.querySelector(`.modal--${pressedBtn}`);
+
+//     targetModal.classList.remove("hidden");
+
+//     document
+//       .querySelector(`.close--${pressedBtn}`)
+//       .addEventListener("click", function (e) {
+//         overlay.classList.add("hidden");
+//         console.log(e);
+//         targetModal.classList.add("hidden");
+//       });
+
+/////////////////////////////////////////////
+//   });
+// });
+
 //////////click on the image to make the image bigger
 
 const allImg = document.querySelectorAll(".gods-room-img");
@@ -191,4 +188,45 @@ document
     imgOverlay.classList.add("hidden");
     overlay.classList.add("hidden");
     imgOverlay.style.backgroundImage = "";
+    goToSlide(0);
   });
+//////////////////////////Solving the modal problem////////////////
+
+const godsNames = [
+  "Zeus ⚡",
+  "Hera 🦚",
+  "Poseidon 🔱",
+  "Demeter 🌾",
+  "Athena 🦉",
+  "Apollo ☀️",
+  "Artemis 🏹",
+  "Ares ⚔️",
+  "Aphrodite 🌹",
+  "Hephaestus ⚒️",
+  "Hermes ⚕️",
+  "Hestia 🔥",
+];
+const modal = document.querySelector(".modal");
+const firstSlide = document.querySelector(".slide-1");
+const secondSlide = document.querySelector(".slide-2");
+const thirdSlide = document.querySelector(".slide-3");
+allBtnBook.forEach((btn) => {
+  btn.addEventListener("click", function (e) {
+    const pressedBtn = e.target.dataset.btn;
+    document.querySelector(".modal-title").innerHTML = `${
+      godsNames[pressedBtn - 1]
+    } room`;
+    firstSlide.src = `img/${pressedBtn}/1.webp`;
+    secondSlide.src = `img/${pressedBtn}/2.jpg`;
+    thirdSlide.src = `img/${pressedBtn}/3.jpg`;
+    modal.classList.remove("hidden");
+    overlay.classList.remove("hidden");
+    document
+      .querySelector(".btn-close-modal")
+      .addEventListener("click", function (e) {
+        modal.classList.add("hidden");
+        overlay.classList.add("hidden");
+        goToSlide(0);
+      });
+  });
+});
