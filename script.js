@@ -233,3 +233,6 @@ allBtnBook.forEach((btn) => {
       });
   });
 });
+///////////////////Change the price acordingly to the options selected and on the room itself
+
+///#1. change the price acordingly to the room itself and show it in the button
