@@ -114,7 +114,7 @@ const goToSlide = function (slide) {
   });
 };
 let curSlide = 0;
-const maxSlides = 3;
+const maxSlides = slides.length;
 
 goToSlide(0);
 
@@ -209,6 +209,7 @@ const modal = document.querySelector(".modal");
 const firstSlide = document.querySelector(".slide-1");
 const secondSlide = document.querySelector(".slide-2");
 const thirdSlide = document.querySelector(".slide-3");
+const forthSlide = document.querySelector(".slide-4");
 allBtnBook.forEach((btn) => {
   btn.addEventListener("click", function (e) {
     const pressedBtn = e.target.dataset.btn;
@@ -216,8 +217,10 @@ allBtnBook.forEach((btn) => {
       godsNames[pressedBtn - 1]
     } room`;
     firstSlide.src = `img/${pressedBtn}/1.webp`;
-    secondSlide.src = `img/${pressedBtn}/2.jpg`;
-    thirdSlide.src = `img/${pressedBtn}/3.jpg`;
+    secondSlide.src = `img/${pressedBtn}/2.webp`;
+    thirdSlide.src = `img/${pressedBtn}/3.webp`;
+    forthSlide.src = `img/${pressedBtn}/4.webp`;
+    console.log(forthSlide.src);
     modal.classList.remove("hidden");
     overlay.classList.remove("hidden");
     document
