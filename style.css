@@ -356,7 +356,7 @@ sticky nav ***************************************
 .grid-rooms {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-
+  backface-visibility: hidden;
   gap: 7rem;
 }
 .room {
@@ -368,16 +368,28 @@ sticky nav ***************************************
   border-radius: 13px;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.3s;
+  /* transition: transform 0.3s; */
   position: relative;
   z-index: 5;
+  /*****/
+  transition: all 0.4s;
+  backface-visibility: hidden;
+
+  -webkit-font-smoothing: subpixel-antialiased;
+  will-change: transform;
 }
 
 .room:hover,
 .room:active {
-  transform: scale(1.03);
+  -webkit-transform: scale(1.04) translate3d(0, 0, 0);
+  -moz-transform: scale(1.04) translate3d(0, 0, 0);
+  -o-transform: scale(1.04) translate3d(0, 0, 0);
+  -ms-transform: scale(1.04) translate3d(0, 0, 0);
+  transform: scale(1.04) translate3d(0, 0, 0);
+
   box-shadow: 0 0 15px rgba(255, 19, 97, 0.7), 0 0 10px rgba(10, 166, 201, 0.5),
     14px 14px 20px rgba(28, 4, 53, 0.5);
+  backface-visibility: hidden;
 }
 .btn-book:hover,
 .btn-book:active {
@@ -405,11 +417,21 @@ sticky nav ***************************************
   padding-left: 4rem;
   padding-bottom: 2rem;
   text-align: left;
+  backface-visibility: hidden;
+
+  -webkit-font-smoothing: subpixel-antialiased;
+  will-change: transform;
 }
+
 .room-features {
   font-size: 1.8rem;
-  padding: 1.5rem 0 0 0;
-  color: #f03e3e;
+  line-height: 2.345;
+  color: rgba(255, 19, 97, 0.7);
+  backface-visibility: hidden;
+
+  -webkit-font-smoothing: subpixel-antialiased;
+  will-change: transform;
+  /* transition: transform 0.1s linear; */
 }
 
 .btn-book {
@@ -435,7 +457,7 @@ sticky nav ***************************************
 .zeus-gaming,
 .zeus-workshop,
 .zeus-bar {
-  color: #40c057;
+  color: rgba(10, 166, 201, 0.9);
 }
 /**/
 .hera-pool,
@@ -443,7 +465,7 @@ sticky nav ***************************************
 .hera-food,
 .hera-workshop,
 .hera-bar {
-  color: #40c057;
+  color: rgba(10, 166, 201, 0.9);
 }
 /**/
 .poseidon-pool,
@@ -451,7 +473,7 @@ sticky nav ***************************************
 .poseidon-food,
 .poseidon-gaming,
 .poseidon-workshop {
-  color: #40c057;
+  color: rgba(10, 166, 201, 0.9);
 }
 
 /**/
@@ -460,7 +482,7 @@ sticky nav ***************************************
 .demeter-food,
 .demeter-gaming,
 .demeter-workshop {
-  color: #40c057;
+  color: rgba(10, 166, 201, 0.9);
 }
 
 /**/
@@ -468,7 +490,7 @@ sticky nav ***************************************
 .athena-gym,
 .athena-workshop,
 .athena-bar {
-  color: #40c057;
+  color: rgba(10, 166, 201, 0.9);
 }
 /**/
 
@@ -476,14 +498,14 @@ sticky nav ***************************************
 .artemis-gaming,
 .artemis-workshop,
 .artemis-bar {
-  color: #40c057;
+  color: rgba(10, 166, 201, 0.9);
 }
 /**/
 .apollo-pool,
 .apollo-gym,
 .apollo-food,
 .apollo-bar {
-  color: #40c057;
+  color: rgba(10, 166, 201, 0.9);
 }
 /**/
 .ares-pool,
@@ -491,21 +513,21 @@ sticky nav ***************************************
 .ares-food,
 .ares-gaming,
 .ares-bar {
-  color: #40c057;
+  color: rgba(10, 166, 201, 0.9);
 }
 /**/
 .aphrodite-pool,
 .aphrodite-gym,
 .aphrodite-food,
 .aphrodite-bar {
-  color: #40c057;
+  color: rgba(10, 166, 201, 0.9);
 }
 /**/
 
 .hephaestus-food,
 .hephaestus-workshop,
 .hephaestus-bar {
-  color: #40c057;
+  color: rgba(10, 166, 201, 0.9);
 }
 /**/
 .hermes-pool,
@@ -514,12 +536,12 @@ sticky nav ***************************************
 .hermes-gaming,
 .hermes-workshop,
 .hermes-bar {
-  color: #40c057;
+  color: rgba(10, 166, 201, 0.9);
 }
 /**/
 
 .hestia-food {
-  color: #40c057;
+  color: rgba(10, 166, 201, 0.9);
 }
 /*******************************************************************
 ***************Modal section***************************************/
