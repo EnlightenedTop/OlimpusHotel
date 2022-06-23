@@ -76,7 +76,7 @@ heroObserver.observe(hero);
 const revealSection = function (entries, observer) {
   const [entry] = entries;
   console.log(entry);
-  if (!entry.isIntersecting) entry.target.classList.add("section--hidden");
+  if (!entry.isIntersecting) return;
   else entry.target.classList.remove("section--hidden");
 };
 const sectionObserver = new IntersectionObserver(revealSection, {
@@ -210,7 +210,7 @@ const firstSlide = document.querySelector(".slide-1");
 const secondSlide = document.querySelector(".slide-2");
 const thirdSlide = document.querySelector(".slide-3");
 const forthSlide = document.querySelector(".slide-4");
-const btc = document.querySelector(".buy-btn");
+const price = document.querySelector(".price");
 allBtnBook.forEach((btn) => {
   btn.addEventListener("click", function (e) {
     const pressedBtn = e.target.dataset.btn;
@@ -224,20 +224,18 @@ allBtnBook.forEach((btn) => {
 
     modal.classList.remove("hidden");
     overlay.classList.remove("hidden");
-    if (pressedBtn < 3) {
-      btc.textContent = 3;
-    }
-
-    document
-      .querySelector(".btn-close-modal")
-      .addEventListener("click", function (e) {
-        modal.classList.add("hidden");
-        overlay.classList.add("hidden");
-        goToSlide(0);
-        curSlide = 0;
-      });
   });
+
+  price.textContent = pressedBtn < 6 ? 
+    .querySelector(".btn-close-modal")
+    .addEventListener("click", function (e) {
+      modal.classList.add("hidden");
+      overlay.classList.add("hidden");
+      goToSlide(0);
+      curSlide = 0;
+    });
 });
+
 ///////////////////Change the price acordingly to the options selected and on the room itself
 
 ///#1. change the price acordingly to the room itself and show it in the button

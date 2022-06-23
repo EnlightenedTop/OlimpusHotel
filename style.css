@@ -18,10 +18,10 @@ body {
 /***********Section reveal effect********************************/
 .section--hidden {
   opacity: 0;
-  transform: translateY(9rem);
+  transform: translateY(1rem);
 }
 .section {
-  transition: ease-in-out 1.3s;
+  transition: all ease-in-out 1.3s;
 }
 /***********************************************************/
 /***********Header settings********************************/
@@ -124,7 +124,7 @@ sticky nav ***************************************
   background-size: cover;
   position: relative;
   padding-top: 7rem;
-  margin-bottom: 5rem;
+  margin-bottom: 15rem;
 }
 
 .hero-title {
@@ -159,7 +159,7 @@ sticky nav ***************************************
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
+  transform: matrix3d(0, 0, 0);
   animation: textclip 2.7s linear infinite;
 }
 /*****************************************************
@@ -184,7 +184,7 @@ sticky nav ***************************************
   gap: 5rem;
   opacity: 0;
   transform: translateX(-180px);
-  transition: ease-in-out 1.3s;
+  transition: ease-in-out 1s;
 }
 .btn {
   transition: all 0.4s;
@@ -211,6 +211,7 @@ sticky nav ***************************************
   -webkit-text-fill-color: transparent;
 
   animation: color 2.7s linear infinite;
+  transform: matrix3d(0, 0, 0);
 }
 .btn-primary:link,
 .btn-primary:visited {
@@ -250,17 +251,17 @@ sticky nav ***************************************
 /******************text apearing effect**********/
 /***********************************************/
 .active {
-  transition: ease-in-out 1.5s;
+  transition: ease-in-out 1s;
   opacity: 1;
   transform: translateY(0px);
 }
 /*****************features section******************/
 /*****************************************************/
 .section {
-  margin-bottom: 4rem;
+  margin-bottom: 15rem;
   max-width: 100vw;
   /* height: 100vh; */
-  padding: 15rem 14rem;
+  padding: 6rem 14rem;
 }
 .section-title {
   text-align: left;
