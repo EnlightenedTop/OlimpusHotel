@@ -66,7 +66,7 @@ const stickyNav = function (entries, observer) {
 };
 const obsOptions = {
   root: null,
-  threshold: 0,
+  threshold: 0.3,
   rootMargin: `${navHeight}px`,
 };
 const heroObserver = new IntersectionObserver(stickyNav, obsOptions);
@@ -226,7 +226,7 @@ allBtnBook.forEach((btn) => {
     overlay.classList.remove("hidden");
   });
 
-  price.textContent = pressedBtn < 6 ? 
+  document
     .querySelector(".btn-close-modal")
     .addEventListener("click", function (e) {
       modal.classList.add("hidden");
