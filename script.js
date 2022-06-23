@@ -91,13 +91,13 @@ allSections.forEach(function (section) {
 console.log();
 ////////smooth scrolling
 history.scrollRestoration = "manual";
-document.querySelector(".nav-links").addEventListener("click", function (e) {
-  if (e.target.classList.contains("nav-link")) {
-    e.preventDefault();
-    const id = e.target.getAttribute("href");
-    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
-  }
-});
+// document.querySelector(".nav-links").addEventListener("click", function (e) {
+//   if (e.target.classList.contains("nav-link")) {
+//     e.preventDefault();
+//     const id = e.target.getAttribute("href");
+//     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+//   }
+// });
 ////////Modal apear when the button is clicked
 
 const slides = document.querySelectorAll(".slide");
