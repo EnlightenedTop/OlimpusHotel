@@ -218,7 +218,7 @@ sticky nav ***************************************
   font-size: 2.6rem;
   padding: 1.3rem 3.2rem;
   color: #fff;
-  border: 3.2px solid #4e0999;
+  border: 2px solid #4e0999;
   text-decoration: none;
   transition: all 0.4s;
   font-weight: 600;
@@ -233,10 +233,10 @@ sticky nav ***************************************
 
 .btn-secondary:link,
 .btn-secondary:visited {
-  text-decoration: none;
+  text-decoration: blink 1px solid;
   color: #fff;
-  border: 2px solid #fff;
-  font-size: 2.6rem;
+  border: none;
+  font-size: 2.4rem;
   padding: 1.3rem 3.2rem;
   transition: all 0.4s;
   font-weight: 500;
@@ -274,9 +274,7 @@ sticky nav ***************************************
   justify-content: space-evenly;
   /* max-width: 65rem; */
 }
-.feature-icon {
-  /* border-radius: 50%; */
-}
+
 .btn-features {
   background-color: transparent;
   display: inline-block;
@@ -365,8 +363,8 @@ sticky nav ***************************************
   gap: 7rem;
 }
 .room {
-  height: 60rem;
-  width: 37rem;
+  height: 48.4rem;
+  width: 32rem;
   background-color: transparent;
   box-shadow: 0 0 5px rgba(255, 19, 97, 0.2), 0 0 15px rgba(10, 166, 201, 0.5),
     5px 2px 6px rgba(28, 4, 53, 0.3);
@@ -400,9 +398,15 @@ sticky nav ***************************************
 .btn-book:active {
   color: rgba(255, 19, 97, 1);
 }
+.title-rooms {
+  margin-bottom: 10rem;
+}
 .gods-room-title {
-  padding: 1rem 0;
-  font-size: 2.4rem;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  will-change: transform;
+  padding: 0.5rem 0;
+  font-size: 2.2rem;
   font-weight: 700;
   text-align: center;
 }
@@ -432,8 +436,8 @@ sticky nav ***************************************
 }
 
 .room-features {
-  font-size: 1.8rem;
-  line-height: 2.345;
+  font-size: 1.6rem;
+  line-height: 2;
   color: rgba(255, 19, 97, 0.7);
   backface-visibility: hidden;
 
@@ -585,11 +589,7 @@ sticky nav ***************************************
   border-radius: 13px;
   border: 1px solid #999;
 }
-.modal-form-room button {
-  grid-column: 1 / span 2;
-  width: 100%;
-  height: 100%;
-}
+
 .modal-room-details {
   display: flex;
   gap: 2rem;
@@ -725,12 +725,12 @@ fieldset div {
   color: #222;
   font-size: 2.8rem;
 }
-/* .dots_dot {
-  position: absolute;
-  bottom: 10%;
-  background-color: rgba(200, 200, 200, 0.3);
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  border: none;
-} */
+form .buy-btn {
+  font-size: 2.5rem;
+  grid-column: 1 / span 2;
+  width: 100%;
+  height: 100%;
+}
+.btc-icon {
+  font-size: 2rem;
+}

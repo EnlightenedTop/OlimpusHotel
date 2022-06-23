@@ -76,12 +76,12 @@ heroObserver.observe(hero);
 const revealSection = function (entries, observer) {
   const [entry] = entries;
   console.log(entry);
-  if (!entry.isIntersecting) return;
-  entry.target.classList.remove("section--hidden");
+  if (!entry.isIntersecting) entry.target.classList.add("section--hidden");
+  else entry.target.classList.remove("section--hidden");
 };
 const sectionObserver = new IntersectionObserver(revealSection, {
   root: null,
-  threshold: 0.2,
+  threshold: 0.1,
 });
 
 allSections.forEach(function (section) {
@@ -210,6 +210,7 @@ const firstSlide = document.querySelector(".slide-1");
 const secondSlide = document.querySelector(".slide-2");
 const thirdSlide = document.querySelector(".slide-3");
 const forthSlide = document.querySelector(".slide-4");
+const btc = document.querySelector(".buy-btn");
 allBtnBook.forEach((btn) => {
   btn.addEventListener("click", function (e) {
     const pressedBtn = e.target.dataset.btn;
@@ -220,9 +221,13 @@ allBtnBook.forEach((btn) => {
     secondSlide.src = `img/${pressedBtn}/2.webp`;
     thirdSlide.src = `img/${pressedBtn}/3.webp`;
     forthSlide.src = `img/${pressedBtn}/4.webp`;
-    console.log(forthSlide.src);
+
     modal.classList.remove("hidden");
     overlay.classList.remove("hidden");
+    if (pressedBtn < 3) {
+      btc.textContent = 3;
+    }
+
     document
       .querySelector(".btn-close-modal")
       .addEventListener("click", function (e) {
