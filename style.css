@@ -237,8 +237,8 @@ sticky nav ***************************************
   text-decoration: blink 1px solid;
   color: #fff;
   border: none;
-  font-size: 2.4rem;
-  padding: 1.3rem 3.2rem;
+  font-size: 2.2rem;
+  padding: 1.8rem 3.2rem;
   transition: all 0.4s;
   font-weight: 500;
   border-radius: 13px 2px 13px 2px;
@@ -365,7 +365,7 @@ sticky nav ***************************************
 }
 .room {
   height: 48.4rem;
-  width: 32rem;
+  width: 30rem;
   background-color: transparent;
   box-shadow: 0 0 5px rgba(255, 19, 97, 0.2), 0 0 15px rgba(10, 166, 201, 0.5),
     5px 2px 6px rgba(28, 4, 53, 0.3);
@@ -400,7 +400,7 @@ sticky nav ***************************************
   color: rgba(255, 19, 97, 1);
 }
 .title-rooms {
-  margin-bottom: 10rem;
+  margin-bottom: 8rem;
 }
 .gods-room-title {
   backface-visibility: hidden;
@@ -450,7 +450,7 @@ sticky nav ***************************************
 .btn-book {
   border: none;
   border-radius: 13px 2px 2px 2px;
-  background-color: #1c0435;
+  background-color: #29074d;
   width: 100%;
   height: 5rem;
   color: #fff;
@@ -458,7 +458,10 @@ sticky nav ***************************************
   font-size: 2rem;
   font-weight: 700;
   text-transform: uppercase;
+  backface-visibility: hidden;
 
+  -webkit-font-smoothing: subpixel-antialiased;
+  will-change: transform;
   text-align: center;
   transition: all 0.3s;
 }
@@ -604,6 +607,7 @@ fieldset {
   text-align: center;
   display: grid;
   grid-template-columns: 1fr;
+  border-radius: 13px 13px 13px 13px;
 }
 fieldset legend {
   margin-bottom: 4rem;
@@ -731,6 +735,10 @@ form .buy-btn {
   grid-column: 1 / span 2;
   width: 100%;
   height: 100%;
+  border-radius: 13px 2px 13px 2px;
+  border: 1px solid #111;
+  background-color: #29074d;
+  color: #fff;
 }
 .btc-icon {
   font-size: 2rem;
