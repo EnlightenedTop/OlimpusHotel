@@ -211,6 +211,11 @@ const secondSlide = document.querySelector(".slide-2");
 const thirdSlide = document.querySelector(".slide-3");
 const forthSlide = document.querySelector(".slide-4");
 const price = document.querySelector(".price");
+const input1 = document.querySelector(".input--1");
+const input2 = document.querySelector(".input--2");
+const input3 = document.querySelector(".input--3");
+const input4 = document.querySelector(".input--4");
+const allInput = document.querySelectorAll(".input");
 allBtnBook.forEach((btn) => {
   btn.addEventListener("click", function (e) {
     const pressedBtn = e.target.dataset.btn;
@@ -221,21 +226,22 @@ allBtnBook.forEach((btn) => {
     secondSlide.src = `img/${pressedBtn}/2.webp`;
     thirdSlide.src = `img/${pressedBtn}/3.webp`;
     forthSlide.src = `img/${pressedBtn}/4.webp`;
-
+    const defaultPrice = [
+      1, 0.75, 0.75, 0.65, 0.5, 0.5, 0.5, 0.45, 0.5, 0.6, 0.5, 0.4,
+    ];
+    let displayPrice = defaultPrice[pressedBtn - 1];
     modal.classList.remove("hidden");
     overlay.classList.remove("hidden");
+    price.textContent = displayPrice;
   });
-
-  document
-    .querySelector(".btn-close-modal")
-    .addEventListener("click", function (e) {
-      modal.classList.add("hidden");
-      overlay.classList.add("hidden");
-      goToSlide(0);
-      curSlide = 0;
-    });
 });
+//////////
 
-///////////////////Change the price acordingly to the options selected and on the room itself
+const btnClose = document.querySelector(".btn-close-modal");
 
-///#1. change the price acordingly to the room itself and show it in the button
+btnClose.addEventListener("click", function (e) {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+  goToSlide(0);
+  curSlide = 0;
+});

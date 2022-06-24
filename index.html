@@ -52,9 +52,9 @@
         <p class="heading-secondary-heading">Is it safe?</p>
         <h2 class="heading-secondary animation">How does it work?</h2></div>
         <div class="features-buttons">
-          <button class=" btn-features btn-active" data-tab="1"><ion-icon  class="feature-icon"name="rocket-outline"></ion-icon></button>
-          <button class=" btn-features" data-tab="2"><ion-icon  class="feature-icon"name="logo-electron"></ion-icon></button>
-          <button class=" btn-features" data-tab="3"><ion-icon  class="feature-icon"name="speedometer-outline"></ion-icon></button>
+          <btn class=" btn-features btn-active" data-tab="1"><ion-icon  class="feature-icon"name="rocket-outline"></ion-icon></btn>
+          <btn class=" btn-features" data-tab="2"><ion-icon  class="feature-icon"name="logo-electron"></ion-icon></btn>
+          <btn class=" btn-features" data-tab="3"><ion-icon  class="feature-icon"name="speedometer-outline"></ion-icon></btn>
         </div>
           <!-- the first part  -->
           <div class="features-box">
@@ -357,8 +357,9 @@
         <button class="slider-btn slider-btn-right"><ion-icon class="slider-btn-icon" name="chevron-forward-outline"></ion-icon></button>
       </div>
       <div class="modal-room-details">
-        <p class="price-tag">Price:<span class="price">0</span></p>
+        
       <form class="modal-form-room">
+        
         <label>First Name</label>
         <input type="text" />
         <label>Last Name</label>
@@ -374,22 +375,23 @@
       <fieldset>
     <legend>Choose your trip options:</legend>
     <div>
-      <input class="input input--1" type="checkbox" id="whole" name="whole">
+      <input class="input input--1" type="checkbox" id="whole" name="whole" value="1.25" data-id="1">
       <label for="whole">Travel the whole universe</label>
     </div>
     <div>
-      <input class="input input--2" type="checkbox" id="Simulation" name="Simulation">
+      <input class="input input--2" type="checkbox" id="Simulation" name="Simulation" value="1.14" data-id="2">
       <label for="Simulation">Simulation</label>
     </div>
     <div>
-      <input class="input input--3" type="checkbox" id="persons" name="persons">
+      <input class="input input--3" type="checkbox" id="persons" name="persons" value="2" data-id="3">
       <label for="persons">2 Persons</label>
     </div>
     <div>
-      <input class="input input--4" type="checkbox" id="meals" name="meals">
+      <input class="input input--4" type="checkbox" id="meals" name="meals" value="1.34" data-id="4">
       <label for="meals">3 Meals per day</label>
     </div>
-</fieldset>
+    <p class="price-tag">Price  <span class="price">0</span><ion-icon class="btc-icon" name="logo-bitcoin"></ion-icon></p>
+</fieldset> 
       </div>
     </div>
     
