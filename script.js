@@ -17,6 +17,8 @@ const allSections = document.querySelectorAll(".section");
 const allBtnBook = document.querySelectorAll(".btn-book");
 const overlay = document.querySelector(".overlay");
 const allModals = document.querySelectorAll(".modal");
+const allNavLinks = document.querySelectorAll(".nav-link");
+const logo = document.querySelector(".logo");
 ///////////////////////////////////////////////////////
 ////////////////text dissapear and apear effect/////////
 ////////////////////////////////////////////////////////
@@ -61,8 +63,14 @@ btnFeatures.addEventListener("click", function (e) {
 const navHeight = nav.getBoundingClientRect().height;
 const stickyNav = function (entries, observer) {
   const [entry] = entries;
-  if (!entry.isIntersecting) header.classList.add("sticky");
-  else header.classList.remove("sticky");
+  if (!entry.isIntersecting) {
+    header.classList.add("sticky");
+
+    allNavLinks.forEach((link) => link.classList.add("animation"));
+  } else {
+    header.classList.remove("sticky");
+    allNavLinks.forEach((link) => link.classList.remove("animation"));
+  }
 };
 const obsOptions = {
   root: null,
