@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Olimpus Hotel</title>
+  </head>
+  <body>
+      <section id="home" class="hero-section">
+        <div class="hero container">
+            <header class="header">
+             <nav class="nav-bar">
+               <a class="logo" href="#">Olimpus</a>
+               <div class="nav-links">
+                 <a class="nav-link" href="#home">Home</a>
+                 <a class="nav-link" href="#about">About</a>
+                 <a class="nav-link" href="#rooms">Rooms</a>
+                 <a class="nav-link" href="#what">Features</a>
+               </div>
+             </nav>
+            </header>
+          <div class="hero-title">
+            <h1 class="heading-primary animation">
+              Experience <br>the Cosmos<br />
+              like never before
+            </h1>
+            <p class="heading-description">
+              Hotel Olimpus treats you with a godly view</br> from the comfort of your
+              room
+            </p>
+          </div>
+          <div class="buttons">
+            <a class="btn btn-primary animation " href="#rooms">Book a room</a>
+            <a class="btn btn-secondary" href="#about">Learn more &darr;</a>
+          </div>
+        </div>
+        
+        <div class="hero-review-box"></div>
+      </section>
+    
+    <section id="about" class="section features-section ">
+      <div class="features container">
+        <div class="section-title featues-title">
+        <p class="heading-secondary-heading">Is it safe?</p>
+        <h2 class="heading-secondary animation">How does it work?</h2></div>
+        <div class="features-buttons">
+          <btn class=" btn-features btn-active" data-tab="1"><ion-icon  class="feature-icon"name="rocket-outline"></ion-icon></btn>
+          <btn class=" btn-features" data-tab="2"><ion-icon  class="feature-icon"name="logo-electron"></ion-icon></btn>
+          <btn class=" btn-features" data-tab="3"><ion-icon  class="feature-icon"name="speedometer-outline"></ion-icon></btn>
+        </div>
+          <!-- the first part  -->
+          <div class="features-box">
+          <div class="features-modal features-modal-1 feature-modal-active">
+          
+          <div class="features-text-box ">
+            <h5 class="heading-tertionary">Reusable Rockets</h5>
+            <p class="feature-description">Thanks to Elon Musk's self landing reausable rockets, we were able to have cheap space travel and we were able to build a hotel here and take everyone else with us!</p>
+          </div>
+          </div>
+          <!-- the second part  -->
+          <div class="features-modal features-modal-2">
+         
+          <div class="features-text-box">
+            <h5 class="heading-tertionary">Cristonium</h5>
+            <p class="feature-description">This new material resitst to the biggest preasure and heat in the universe , with this we are able to take you where no human ever was before , even close to the sun.</p>
+          </div>
+          </div>
+          <!-- the third part  -->
+          <div class="features-modal features-modal-3">
+          
+          <div class="features-text-box">
+            <h5 class="heading-tertionary">A.I Workers</h5>
+            <p class="feature-description">State of art tehnology enabled robots for any kind of work related things in our hotel, they behave like humans,but they are here for your own pleasure ;)</p>
+          </div>
+          </div>
+          </div>
+      </div>
+    </section>
+    <section id="rooms" class="rooms-section section">
+      <div class="section-title title-rooms">
+      <p class="heading-secondary-heading">Feeling like a god</p>
+        <h2 class="heading-secondary animation">Join the pantheon</h2></div>
+      </div>
+      <div class="rooms-container rooms grid-rooms">
+       <!-- Zeus room -->
+        <div class="room zeus-room">
+          <h3 class="gods-room-title">Zeus⚡</h3>
+          <div data-img="1" class="img-gods-box"><img class="gods-room-img" src="img/1/1.webp">
+          </div>
+          <div class="description-gods-room">
+            <p class="room-features room-zeus zeus-pool"><ion-icon class="room-icon zeus-room-icon" name="water-outline"></ion-icon> In-room pool </p>
+            <p class="room-features room-zeus zeus-gym"><ion-icon class="room-icon zeus-room-icon" name="barbell-outline"></ion-icon>  Gym</p>
+            <p class="room-features room-zeus zeus-food"><ion-icon class="room-icon zeus-room-icon" name="restaurant-outline"></ion-icon>  Food</p>
+            <p class="room-features room-zeus zeus-gaming"><ion-icon class="room-icon zeus-room-icon" name="game-controller-outline"></ion-icon> Entertainment room</p>
+            <p class="room-features room-zeus zeus-workshop"><ion-icon class="room-icon zeus-room-icon" name="color-palette-outline"></ion-icon>
+             Workshop</p>
+            <p class="room-features room-zeus zeus-bar">
+              <ion-icon class="room-icon zeus-room-icon" name="wine-outline"></ion-icon> Dionysus bar
+            </p>
+          </div>
+          <button data-btn="1" class="btn btn-book">Book room</button>
+          <!-- Hera room -->
+        </div>
+        <!-- Hera room -->
+        <div class="room hera-room">
+          <h3 class="gods-room-title">
+           Hera 🦚
+        </h3>
+          <div class="img-gods-box">
+            <img data-img="2" class="gods-room-img" src="img/2/1.webp">
+          </div>
+         <div class="description-gods-room">
+            <p class="room-features hera-pool"><ion-icon class="room-icon zeus-room-icon" name="water-outline"></ion-icon> In-room pool </p>
+            <p class="room-features hera-gym"><ion-icon class="room-icon zeus-room-icon" name="barbell-outline"></ion-icon>  Gym</p>
+            <p class="room-features hera-food"><ion-icon class="room-icon zeus-room-icon" name="restaurant-outline"></ion-icon>  Food</p>
+            <p class="room-features hera-gaming"><ion-icon class="room-icon zeus-room-icon" name="game-controller-outline"></ion-icon> Entertainment room</p>
+            <p class="room-features hera-workshop"><ion-icon class="room-icon zeus-room-icon" name="color-palette-outline"></ion-icon>
+             Workshop</p>
+            <p class="room-features hera-bar">
+              <ion-icon class="room-icon zeus-room-icon" name="wine-outline"></ion-icon> Dionysus bar
+            </p>
+          </div>
+          <button data-btn="2" class="btn btn-book">Book room</button>
+        </div>
+        <!-- Poseidon room -->
+        <div class="room poseidon-room">
+          <h3 class="gods-room-title">
+            Poseidon 🔱
+          </h3>
+          <div class="img-gods-box">
+            <img class="gods-room-img" src="img/3/1.webp">
+          </div>
+         <div class="description-gods-room">
+            <p class="room-features poseidon-pool"><ion-icon class="room-icon zeus-room-icon" name="water-outline"></ion-icon> In-room pool </p>
+            <p class="room-features poseidon-gym"><ion-icon class="room-icon zeus-room-icon" name="barbell-outline"></ion-icon>  Gym</p>
+            <p class="room-features poseidon-food"><ion-icon class="room-icon zeus-room-icon" name="restaurant-outline"></ion-icon>  Food</p>
+            <p class="room-features poseidon-gaming"><ion-icon class="room-icon zeus-room-icon" name="game-controller-outline"></ion-icon> Entertainment room</p>
+            <p class="room-features poseidon-workshop"><ion-icon class="room-icon zeus-room-icon" name="color-palette-outline"></ion-icon>
+             Workshop</p>
+            <p class="room-features poseidon-bar">
+              <ion-icon class="room-icon zeus-room-icon" name="wine-outline"></ion-icon> Dionysus bar
+            </p>
+          </div>
+          <button data-btn="3" class="btn btn-book">Book room</button>
+        </div>
+        <!-- Demeter room -->
+        <div class="room demeter-room">
+          <h3 class="gods-room-title">Demeter 🌾</h3>
+          <div class="img-gods-box">
+            <img class="gods-room-img" src="img/4/1.webp">
+          </div>
+          <div class="description-gods-room">
+            <p class="room-features demeter-pool"><ion-icon class="room-icon zeus-room-icon" name="water-outline"></ion-icon> In-room pool </p>
+            <p class="room-features demeter-gym"><ion-icon class="room-icon zeus-room-icon" name="barbell-outline"></ion-icon>  Gym</p>
+            <p class="room-features demeter-food"><ion-icon class="room-icon zeus-room-icon" name="restaurant-outline"></ion-icon>  Food</p>
+            <p class="room-features demeter-gaming"><ion-icon class="room-icon zeus-room-icon" name="game-controller-outline"></ion-icon> Entertainment room</p>
+            <p class="room-features demeter-workshop"><ion-icon class="room-icon zeus-room-icon" name="color-palette-outline"></ion-icon>
+             Workshop</p>
+            <p class="room-features demeter-bar">
+              <ion-icon class="room-icon zeus-room-icon" name="wine-outline"></ion-icon> Dionysus bar
+            </p>
+          </div>
+          <button data-btn="4" class="btn btn-book">Book room</button>
+        </div>
+        <!-- Athena room -->
+        <div class="room athena-room">
+          <h3 class="gods-room-title">Athena 🦉</h3>
+          <div class="img-gods-box">
+            <img class="gods-room-img" src="img/5/1.webp">
+          </div>
+         <div class="description-gods-room">
+            <p class="room-features athena-pool"><ion-icon class="room-icon zeus-room-icon" name="water-outline"></ion-icon> In-room pool </p>
+            <p class="room-features athena-gym"><ion-icon class="room-icon zeus-room-icon" name="barbell-outline"></ion-icon>  Gym</p>
+            <p class="room-features athena-food"><ion-icon class="room-icon zeus-room-icon" name="restaurant-outline"></ion-icon>  Food</p>
+            <p class="room-features athena-gaming"><ion-icon class="room-icon zeus-room-icon" name="game-controller-outline"></ion-icon> Entertainment room</p>
+            <p class="room-features athena-workshop"><ion-icon class="room-icon zeus-room-icon" name="color-palette-outline"></ion-icon>
+             Workshop</p>
+            <p class="room-features athena-bar">
+              <ion-icon class="room-icon zeus-room-icon" name="wine-outline"></ion-icon> Dionysus bar
+            </p>
+          </div>
+          <button data-btn="5" class="btn btn-book">Book room</button>
+        </div>
+        <!-- Apollo room -->
+        <div class="room apollo-room">
+          <h3 class="gods-room-title">Apollo ☀️</h3>
+          <div class="img-gods-box">
+            <img class="gods-room-img" src="img/6/1.webp">
+          </div>
+          <div class="description-gods-room">
+            <p class="room-features apollo-pool"><ion-icon class="room-icon zeus-room-icon" name="water-outline"></ion-icon> In-room pool </p>
+            <p class="room-features apollo-gym"><ion-icon class="room-icon zeus-room-icon" name="barbell-outline"></ion-icon>  Gym</p>
+            <p class="room-features apollo-food"><ion-icon class="room-icon zeus-room-icon" name="restaurant-outline"></ion-icon>  Food</p>
+            <p class="room-features apollo-gaming"><ion-icon class="room-icon zeus-room-icon" name="game-controller-outline"></ion-icon> Entertainment room</p>
+            <p class="room-features apollo-workshop"><ion-icon class="room-icon zeus-room-icon" name="color-palette-outline"></ion-icon>
+             Workshop</p>
+            <p class="room-features apollo-bar">
+              <ion-icon class="room-icon zeus-room-icon" name="wine-outline"></ion-icon> Dionysus bar
+            </p>
+          </div>
+          <button data-btn="6" class="btn btn-book">Book room</button>
+        </div>
+        <!-- Artemis room -->
+        <div class="room artemis-room">
+          <h3 class="gods-room-title">Artemis 🏹</h3>
+          <div class="img-gods-box">
+            <img class="gods-room-img" src="img/7/1.webp">
+          </div>
+          <div class="description-gods-room">
+            <p class="room-features artemis-pool"><ion-icon class="room-icon zeus-room-icon" name="water-outline"></ion-icon> In-room pool </p>
+            <p class="room-features artemis-gym"><ion-icon class="room-icon zeus-room-icon" name="barbell-outline"></ion-icon>  Gym</p>
+            <p class="room-features artemis-food"><ion-icon class="room-icon zeus-room-icon" name="restaurant-outline"></ion-icon>  Food</p>
+            <p class="room-features artemis-gaming"><ion-icon class="room-icon zeus-room-icon" name="game-controller-outline"></ion-icon> Entertainment room</p>
+            <p class="room-features artemis-workshop"><ion-icon class="room-icon zeus-room-icon" name="color-palette-outline"></ion-icon>
+             Workshop</p>
+            <p class="room-features artemis-bar">
+              <ion-icon class="room-icon zeus-room-icon" name="wine-outline"></ion-icon> Dionysus bar
+            </p>
+          </div>
+          <button data-btn="7" class="btn btn-book">Book room</button>
+        </div>
+        <!-- Ares room -->
+        <div class="room ares-room">
+          <h3 class="gods-room-title">Ares ⚔️</h3>
+          <div class="img-gods-box">
+            <img class="gods-room-img" src="img/8/1.webp">
+          </div>
+          <div class="description-gods-room">
+            <p class="room-features ares-pool"><ion-icon class="room-icon zeus-room-icon" name="water-outline"></ion-icon> In-room pool </p>
+            <p class="room-features ares-gym"><ion-icon class="room-icon zeus-room-icon" name="barbell-outline"></ion-icon>  Gym</p>
+            <p class="room-features ares-food"><ion-icon class="room-icon zeus-room-icon" name="restaurant-outline"></ion-icon>  Food</p>
+            <p class="room-features ares-gaming"><ion-icon class="room-icon zeus-room-icon" name="game-controller-outline"></ion-icon> Entertainment room</p>
+            <p class="room-features ares-workshop"><ion-icon class="room-icon zeus-room-icon" name="color-palette-outline"></ion-icon>
+             Workshop</p>
+            <p class="room-features ares-bar">
+              <ion-icon class="room-icon zeus-room-icon" name="wine-outline"></ion-icon> Dionysus bar
+            </p>
+          </div>
+          <button data-btn="8" class="btn btn-book">Book room</button>
+        </div>
+        <!-- Aphrodite room -->
+        <div class="room aphrodite-room">
+          <h3 class="gods-room-title">Aphrodite 🌹</h3>
+          <div class="img-gods-box">
+            <img class="gods-room-img" src="img/9/1.webp">
+          </div>
+          <div class="description-gods-room">
+            <p class="room-features aphrodite-pool"><ion-icon class="room-icon zeus-room-icon" name="water-outline"></ion-icon> In-room pool </p>
+            <p class="room-features aphrodite-gym"><ion-icon class="room-icon zeus-room-icon" name="barbell-outline"></ion-icon>  Gym</p>
+            <p class="room-features aphrodite-food"><ion-icon class="room-icon zeus-room-icon" name="restaurant-outline"></ion-icon>  Food</p>
+            <p class="room-features aphrodite-gaming"><ion-icon class="room-icon zeus-room-icon" name="game-controller-outline"></ion-icon> Entertainment room</p>
+            <p class="room-features aphrodite-workshop"><ion-icon class="room-icon zeus-room-icon" name="color-palette-outline"></ion-icon>
+             Workshop</p>
+            <p class="room-features aphrodite-bar">
+              <ion-icon class="room-icon zeus-room-icon" name="wine-outline"></ion-icon> Dionysus bar
+            </p>
+          </div>
+          <button data-btn="9" class="btn btn-book">Book room</button>
+        </div>
+        <!-- Hephaestus room -->
+        <div class="room hephaestus-room">
+          <h3 class="gods-room-title">Hephaestus ⚒️ </h3>
+          <div class="img-gods-box">
+            <img class="gods-room-img" src="img/10/1.webp">
+          </div>
+          <div class="description-gods-room">
+            <p class="room-features hephaestus-pool"><ion-icon class="room-icon zeus-room-icon" name="water-outline"></ion-icon> In-room pool </p>
+            <p class="room-features hephaestus-gym"><ion-icon class="room-icon zeus-room-icon" name="barbell-outline"></ion-icon>  Gym</p>
+            <p class="room-features hephaestus-food"><ion-icon class="room-icon zeus-room-icon" name="restaurant-outline"></ion-icon>  Food</p>
+            <p class="room-features hephaestus-gaming"><ion-icon class="room-icon zeus-room-icon" name="game-controller-outline"></ion-icon> Entertainment room</p>
+            <p class="room-features hephaestus-workshop"><ion-icon class="room-icon zeus-room-icon" name="color-palette-outline"></ion-icon>
+             Workshop</p>
+            <p class="room-features hephaestus-bar">
+              <ion-icon class="room-icon zeus-room-icon" name="wine-outline"></ion-icon> Dionysus bar
+            </p>
+          </div>
+          <button data-btn="10" class="btn btn-book">Book room</button>
+        </div>
+        <!-- Hermes room -->
+        <div class="room hermes-room">
+          <h3 class="gods-room-title">Hermes ⚕️</h3>
+          <div class="img-gods-box">
+            <img class="gods-room-img" src="img/11/1.webp">
+          </div>
+         <div class="description-gods-room">
+            <p class="room-features hermes-pool"><ion-icon class="room-icon zeus-room-icon" name="water-outline"></ion-icon> In-room pool </p>
+            <p class="room-features hermes-gym"><ion-icon class="room-icon zeus-room-icon" name="barbell-outline"></ion-icon>  Gym</p>
+            <p class="room-features hermes-food"><ion-icon class="room-icon zeus-room-icon" name="restaurant-outline"></ion-icon>  Food</p>
+            <p class="room-features hermes-gaming"><ion-icon class="room-icon zeus-room-icon" name="game-controller-outline"></ion-icon> Entertainment room</p>
+            <p class="room-features hermes-workshop"><ion-icon class="room-icon zeus-room-icon" name="color-palette-outline"></ion-icon>
+             Workshop</p>
+            <p class="room-features hermes-bar">
+              <ion-icon class="room-icon zeus-room-icon" name="wine-outline"></ion-icon> Dionysus bar
+            </p>
+          </div>
+          <button data-btn="11" class="btn btn-book">Book room</button>
+        </div>
+        <!-- Hestia room -->
+        <div class="room hestia-room">
+          <h3 class="gods-room-title">
+            Hestia 🔥
+          </h3>
+          <div class="img-gods-box">
+            <img class="gods-room-img" src="img/12/1.webp">
+          </div>
+         <div class="description-gods-room">
+            <p class="room-features hestia-pool"><ion-icon class="room-icon zeus-room-icon" name="water-outline"></ion-icon> In-room pool </p>
+            <p class="room-features hestia-gym"><ion-icon class="room-icon zeus-room-icon" name="barbell-outline"></ion-icon>  Gym</p>
+            <p class="room-features hestia-food"><ion-icon class="room-icon zeus-room-icon" name="restaurant-outline"></ion-icon>  Food</p>
+            <p class="room-features hestia-gaming"><ion-icon class="room-icon zeus-room-icon" name="game-controller-outline"></ion-icon> Entertainment room</p>
+            <p class="room-features hestia-workshop"><ion-icon class="room-icon zeus-room-icon" name="color-palette-outline"></ion-icon>
+             Workshop</p>
+            <p class="room-features hestia-bar">
+              <ion-icon class="room-icon zeus-room-icon" name="wine-outline"></ion-icon> Dionysus bar
+            </p>
+          </div>
+          <button data-btn="12" class="btn btn-book">Book room</button>
+        </div>
+        
+      </div>
+    </section>
+
+
+    <div class="modal-section">
+      
+      <div class="modal modal--1 hidden">
+        <button class="btn-close-modal close--1">&times;</button>
+       <div class="section-title modal-title-box">
+        <h2 class="heading-secondary animation modal-title">Zeus room ⚡</h2>
+        <p>Disclaimer: Every room option travels you to the designated God planet!</p>
+      </div>
+      <div class="modal-description">
+        <h3 class="modal-description-title">About your journey</h3>
+      </div>
+      <div class="img-slider slider--1">
+        <div class="slide slide--1">
+          <img class="slide-img slide-1" src="" alt=" room main photo">
+        </div>
+        <div class="slide slide--1">
+          <img class="slide-img slide-2" src="" alt=" room secondary photo">
+        </div>
+        <div class="slide slide--1">
+          <img class="slide-img slide-3" src="" alt=" room tertiary photo">
+        </div>
+        <div class="slide slide--1">
+          <img class="slide-img slide-4" src="" alt=" room tertiary photo">
+        </div>
+        <button class="slider-btn slider-btn-left"><ion-icon class="slider-btn-icon" name="chevron-back-outline"></ion-icon></button>
+        <button class="slider-btn slider-btn-right"><ion-icon class="slider-btn-icon" name="chevron-forward-outline"></ion-icon></button>
+      </div>
+      <div class="modal-room-details">
+        
+      <form class="modal-form-room">
+        
+        <label>First Name</label>
+        <input type="text" />
+        <label>Last Name</label>
+        <input type="text" />
+        <label>Email Address</label>
+        <input type="email" />
+        <label>Journey starts</label>
+        <input type="date" />
+        <label>Journey ends</label>
+        <input type="date" />
+        <button class="buy-btn">Book the journey</button>
+      </form>
+      <fieldset>
+    <legend>Choose your trip options:</legend>
+    <div>
+      <input class="input input--1" type="checkbox" id="whole" name="whole" value="1.25" data-id="1">
+      <label for="whole">Travel the whole universe</label>
+    </div>
+    <div>
+      <input class="input input--2" type="checkbox" id="Simulation" name="Simulation" value="1.14" data-id="2">
+      <label for="Simulation">Simulation</label>
+    </div>
+    <div>
+      <input class="input input--3" type="checkbox" id="persons" name="persons" value="2" data-id="3">
+      <label for="persons">2 Persons</label>
+    </div>
+    <div>
+      <input class="input input--4" type="checkbox" id="meals" name="meals" value="1.34" data-id="4">
+      <label for="meals">3 Meals per day</label>
+    </div>
+    <p class="price-tag">Price  <span class="price">0</span><ion-icon class="btc-icon" name="logo-bitcoin"></ion-icon></p>
+</fieldset> 
+      </div>
+    </div>
+    
+    </div> 
+
+    <section class="section section-what" id="what">
+      <div class="section-title what-rooms">
+      <p class="heading-secondary-heading">God's favours</p>
+        <h2 class="heading-secondary animation">Unique features</h2></div>
+      </div>
+      <div class="what--container">
+        <!-- part 1 -->
+      
+       <div class="what-img-box">
+        <img class ='what-img'src="img/features photos/main_image_star-forming_region_carina_nircam_final-1280.jpg" alt="image of carina from james webb telescope/satelite"/></div>
+       
+       <div class="what-text-box">
+        <h3 class="heading-tertiary-what animation">What the actual fuck</h3>
+        <p class="text-description-what">Bruh this is god tripping and you get to see it , this needs no further explanation to be honest, so what are you waiting for?</p>
+       </div>
+      
+      <!-- part 2 -->
+      <div class="what-text-box">
+        <h3 class="heading-tertiary-what animation">Have a drink with E.Ts</h3>
+        <p class="text-description-what">Now you can have a drink or a smoke with your inter-planetary neighbours, sounds cool just be really careful, they really care about their favourite football team.</p>
+       </div>
+      <div class="what-img-box">
+        <img class ='what-img'src="img/features photos/alien.webp" alt="image of an alien"/></div>
+      
+      <!-- part 3 -->
+      <div class="what-img-box">
+        <img class ='what-img'src="img/features photos/earth.webp" alt="image of earth from nasa"/></div>
+       
+       <div class="what-text-box">
+        <h3 class="heading-tertiary-what animation">Far away from earth</h3>
+        <p class="text-description-what">Honestly if somebody would have told me i could go away from earth i would sell everything and just go, don't even think about it, just hope they have fries in space...</p>
+       </div>
+       </div>
+    </section>
+    <div class="overlay hidden"></div>
+    <div class="img-overlay hidden">
+      <button class="btn-close-modal img-overlay-close">&times;</button>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
