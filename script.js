@@ -66,10 +66,12 @@ const stickyNav = function (entries, observer) {
   if (!entry.isIntersecting) {
     header.classList.add("sticky");
 
-    allNavLinks.forEach((link) => link.classList.add("animation"));
+    // allNavLinks.forEach((link) => link.classList.add("animation--second"));
+    // logo.classList.add("animation--second");
   } else {
     header.classList.remove("sticky");
-    allNavLinks.forEach((link) => link.classList.remove("animation"));
+    // allNavLinks.forEach((link) => link.classList.remove("animation--second"));
+    // logo.classList.remove("animation--second");
   }
 };
 const obsOptions = {
