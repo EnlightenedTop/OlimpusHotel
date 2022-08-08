@@ -226,6 +226,7 @@ const input2 = document.querySelector(".input--2");
 const input3 = document.querySelector(".input--3");
 const input4 = document.querySelector(".input--4");
 const allInput = document.querySelectorAll(".input");
+
 allBtnBook.forEach((btn) => {
   btn.addEventListener("click", function (e) {
     const pressedBtn = e.target.dataset.btn;
