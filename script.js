@@ -29,7 +29,7 @@ setTimeout(() => {
   buttons.classList.add("buttons-active");
 }, 300);
 ///////////////////////////////////////////
-/////////////////Features section modals///////////
+/////////////////how it works section modals///////////
 /////////////////////////////////////////////////
 btnFeatures.addEventListener("click", function (e) {
   const clicked = e.target.closest(".btn-features");
@@ -98,7 +98,35 @@ allSections.forEach(function (section) {
   sectionObserver.observe(section);
   section.classList.add("section--hidden");
 });
-console.log();
+const textBox1 = document.querySelector(".part-1");
+const textBox2 = document.querySelector(".part-2");
+const textBox3 = document.querySelector(".part-3");
+const imgBox1 = document.querySelector(".img-box--1");
+const imgBox2 = document.querySelector(".img-box--2");
+const imgBox3 = document.querySelector(".img-box--3");
+const revealFeatures = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  else {
+    entry.target.classList.remove("feature--hidden-1");
+    entry.target.classList.remove("feature--hidden-2");
+  }
+};
+const featureObserver = new IntersectionObserver(revealFeatures, {
+  root: null,
+  threshold: 0.5,
+});
+
+featureObserver.observe(textBox1);
+featureObserver.observe(textBox2);
+featureObserver.observe(textBox3);
+
+textBox1.classList.add("feature--hidden-1");
+
+textBox2.classList.add("feature--hidden-2");
+
+textBox3.classList.add("feature--hidden-1");
+
 ////////smooth scrolling
 history.scrollRestoration = "manual";
 // document.querySelector(".nav-links").addEventListener("click", function (e) {
