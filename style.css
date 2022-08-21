@@ -700,7 +700,7 @@ sticky nav ***************************************
 } */
 .room::before,
 .room::after {
-  background: linear-gradient(315deg, #03a9f4, #ff0058);
+  background: linear-gradient(315deg, #4dff03, #00d0ff);
 }
 .room:hover:before,
 .room:hover:after {
