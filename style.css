@@ -96,13 +96,13 @@ sticky nav ***************************************
   position: fixed;
   top: 0;
   background: linear-gradient(
-    25deg,
-    rgba(56, 217, 169, 0.7),
-    rgba(174, 62, 201, 0.7)
+    315deg,
+    rgba(77, 255, 3, 0.3),
+    rgba(0, 208, 255, 0.3)
   );
   width: 100%;
-  z-index: 10;
-  color: #fff;
+  z-index: 100000;
+  color: #fab005;
   backdrop-filter: blur(6px);
 }
 .stiky .nav-bar {
@@ -110,7 +110,7 @@ sticky nav ***************************************
   color: rgba(174, 62, 201, 1);
 }
 .sticky .nav-link {
-  color: #fff;
+  color: #fab005;
 }
 .sticky .nav-link:after {
   background-color: #fab005;
@@ -555,7 +555,7 @@ sticky nav ***************************************
   border: none;
   font-size: 4.8rem;
   margin-bottom: 2rem;
-  color: rgba(240, 62, 62, 0.8);
+  color: #fab005;
   transition: all 0.3s;
   cursor: pointer;
   text-align: center;
@@ -564,13 +564,13 @@ sticky nav ***************************************
 .btn-features:hover,
 .btn-features:active {
   background-color: transparent;
-  color: #38d9a9;
+  color: #4dff03;
 }
 .btn-active,
 .btn-active:visited,
 .btn-active:active {
-  color: #38d9a9;
   background-color: transparent;
+  color: #4dff03;
   transform: scale(1.1);
 }
 
@@ -588,6 +588,15 @@ sticky nav ***************************************
   font-weight: 600;
   color: rgba(240, 62, 62, 0.8);
 }
+.features-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 255, 255, 0.75);
+}
 .features-modal {
   text-align: center;
   display: none;
@@ -599,18 +608,55 @@ sticky nav ***************************************
   max-width: 100%;
   height: auto;
   opacity: 1;
-  border-radius: 20px 20px 3px 20px;
-
-  box-shadow: 5px 5px 25px rgba(240, 62, 62, 0.8), 0 0 25px #38d9a9;
-  animation: bor 6s infinite linear;
+  border-radius: 20px;
+}
+.features-box::before {
+  content: "";
+  position: absolute;
+  width: 2000rem;
+  height: 500rem;
+  background-image: conic-gradient(
+    transparent,
+    transparent,
+    transparent,
+    #00d0ff
+  );
+  animation: animate 6s linear infinite;
+}
+.features-box::after {
+  content: "";
+  position: absolute;
+  width: 2000rem;
+  height: 500rem;
+  background-image: conic-gradient(
+    transparent,
+    transparent,
+    transparent,
+    #4dff03
+  );
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+.features-box span {
+  position: absolute;
+  inset: 15px;
+  background: rgba(255, 255, 255, 1);
+  z-index: 1;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .feature-modal-active {
   display: inline-block;
   transition: ease-in-out 0.4s;
+  z-index: 10;
 }
-/* .features-modal-1 {
-  background: linear-gradient(315deg, #03a9f4, #ff0058);
-} */
+
 .features-box {
   text-align: center;
 }
@@ -619,6 +665,7 @@ sticky nav ***************************************
   font-size: 3.2rem;
   font-weight: 700;
   color: #000000;
+  z-index: 10;
 }
 .feature-description {
   text-align: left;
@@ -626,6 +673,7 @@ sticky nav ***************************************
   font-weight: 500;
   line-height: 1.6;
   color: rgba(0, 0, 0, 1);
+  z-index: 10;
 }
 /*****************Rooms section******************/
 /*****************************************************/
@@ -698,8 +746,7 @@ sticky nav ***************************************
   transition: 0.5s;
   filter: blur(30px);
 } */
-.room::before,
-.room::after {
+.room::before {
   background: linear-gradient(315deg, #4dff03, #00d0ff);
 }
 .room:hover:before,
@@ -1064,7 +1111,7 @@ form .buy-btn:active {
   /* left: 0; */
   right: 2rem;
   border-radius: 0px 2px 13px 0px;
-  border: 5px solid #ae3ec9;
+  border: 5px solid #4dff03;
 
   transition: all 0.3s ease-in-out;
   z-index: -2000;
@@ -1078,7 +1125,7 @@ form .buy-btn:active {
   top: 0.4rem;
   left: 0rem;
   animation: border--first linear infinite 5s;
-  border: 3px solid #38d9a9;
+  border: 3px solid #4dff03;
   border-radius: 13px 2px 13px 0px;
   transform-origin: center;
 
@@ -1093,7 +1140,7 @@ form .buy-btn:active {
   top: 0.4rem;
   left: 0rem;
   animation: border--first linear infinite 5s;
-  border: 3px solid #38d9a9;
+  border: 3px solid #4dff03;
   border-radius: 13px 2px 13px 0px;
   transform-origin: center;
   transition: all 0.3s ease-in-out;
