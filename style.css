@@ -1198,7 +1198,7 @@ form .buy-btn:active {
 .footer {
   position: relative;
   width: 100%;
-  background: #003e4d;
+  background: linear-gradient(315deg, #4dff03, #00d0ff);
   min-height: 100px;
   margin-top: 25rem;
   padding: 2rem 5rem;
